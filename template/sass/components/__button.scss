@@ -27,9 +27,9 @@
         color: initial;
     }
 
-    &:hover{
-        box-shadow: 10px 10px 20px rgba($color: $b-cl , $alpha: 0.16);
-    }
+    // &:hover{
+    //     box-shadow: 10px 10px 20px rgba($color: $b-cl , $alpha: 0.16);
+    // }
 
    
 }
@@ -95,8 +95,24 @@
     position: relative;
     cursor: pointer;
     display: none;
+    margin-left: 10px;
 
-    @include max-media($bk-d-1200) {
+    &::before{
+        content: '';
+        width: 1px;
+        height: 30px;
+        background-color: $blue-cl;
+        position: absolute;
+        top: 50%;
+        left: -4px;
+        transform: translateY(-50%);
+        @include hidden;
+        @include max-media($bk-d-768){
+            @include visible;
+        }
+    }
+
+    @include max-media($bk-1300) {
         display: block;
     }
 
@@ -154,16 +170,20 @@
     position: fixed;
     bottom: 40px;
     right: 20px;
-    width: 40px;
-    height: 40px;
-    background-color: $main-cl;
-    border: 1px $main-cl solid;
-    border-radius: 4px;
+    width: 60px;
+    height: 60px;
+    background-color: $green-cl;
+    border: 1px $green-cl solid;
+    border-radius: 100%;
     cursor: pointer;
     z-index: 999;
     overflow: hidden;
     @include trans(.6s);
     @include hidden();
+    @include max-media($bk-d-768){
+        height: 40px;
+        width: 40px;
+    }
 
     &.--active {
         @include visible();
@@ -177,8 +197,11 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        font-size: 20px;
+        font-size: 40px;
         @include trans(.3s);
+        @include max-media($bk-d-768){
+            font-size: 20px;
+        }
     }
 
     &::before {

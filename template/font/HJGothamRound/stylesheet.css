@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'HJ Gotham Round';
+    src: url('HJGothamRoundBook.woff2') format('woff2'),
+        url('HJGothamRoundBook.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HJ Gotham Round';
+    src: url('HJGothamRoundBold.woff2') format('woff2'),
+        url('HJGothamRoundBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

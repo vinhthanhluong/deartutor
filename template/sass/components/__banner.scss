@@ -1,24 +1,260 @@
-.banner {
-	.swiper-wrapper {
-		margin: 0;
-	}
-	.swiper-slide {
-		padding: 0;
-		height: 100%;
-	}
-	.swiper-slide > img {
-		width: 100%;
-		height: auto;
-		object-fit: cover;
-	}
-	.swiper-button-prev {
-		left: 20px;
-	}
-	.swiper-button-next {
-		right: 20px;
-	}
-	.swiper-pagination {
-		position: absolute;
-		bottom: 0;
-	}
+.banners {
+    width: 100%;
+    height: auto;
+
+    .swiper-wrapper {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        z-index: -1;
+    }
+
+    .swiper-slide {
+        padding: 0;
+        height: 100%;
+        // position: relative;
+    }
+
+    .swiper-slide img {
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .swiper-button-prev {
+        left: 20px;
+    }
+
+    .swiper-button-next {
+        right: 20px;
+    }
+
+    .swiper-pagination {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .banners-wrap {
+        color: $w-cl;
+
+        .banners-title {
+            @include lh(84, 70);
+            margin-bottom: 30px;
+
+            @include max-media($bk-d-1200) {
+                margin-bottom: 20px;
+            }
+        }
+
+        .banners-text {
+            max-width: 665px;
+            margin: 0 auto;
+            @include lh(24, 16);
+            margin-bottom: 35px;
+
+            @include max-media($bk-d-1200) {
+                margin-bottom: 25px;
+            }
+        }
+
+        .banners-form {
+            width: 700px;
+            height: 50px;
+            margin: 0 auto;
+            position: relative;
+
+            @include max-media($bk-d-768) {
+                width: auto;
+            }
+
+            @include max-media($bk-576) {
+                height: 44px;
+            }
+
+            .banners-search {
+                width: 100%;
+                height: 50px;
+                border: none;
+                padding: 13px 350px 13px 25px;
+                border-radius: 99px;
+
+                @include max-media($bk-d-768) {
+                    padding-right: 320px;
+                }
+
+                @include max-media($bk-576) {
+                    padding-right: 165px;
+                    padding-left: 15px;
+                    height: 44px;
+                }
+
+                &::placeholder {
+                    color: rgba($color: $b-cl, $alpha: .3);
+                }
+            }
+
+            .banners-select {
+                width: 200px;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 130px;
+
+                @include max-media($bk-d-768) {
+                    width: 170px;
+                }
+
+                @include max-media($bk-576) {
+                    right: 0;
+                    width: 150px;
+
+                }
+
+                &::before {
+                    content: '';
+                    width: 1px;
+                    height: 30px;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    background-color: rgba($color: $b-cl, $alpha: .1);
+                }
+
+                .banners-se {
+                    width: 100%;
+                    color: rgba($color: $b-cl, $alpha: .3);
+                    outline: none;
+                    border: none;
+                    background-image: url('../img/svg/icon-down.svg');
+                    background-repeat: no-repeat;
+                    background-position: right 25px center;
+                    padding: 13px 25px;
+                    height: 50px;
+                    cursor: pointer;
+
+                    @include max-media($bk-d-768) {
+                        padding: 13px 15px;
+                        background-position: right 15px center;
+                        border-radius: 99px;
+                    }
+
+                    @include max-media($bk-576) {
+                        height: 44px;
+                    }
+
+                }
+            }
+
+            .banners-sub {
+                width: 130px;
+                height: 50px;
+                background-color: $main-cl;
+                color: $w-cl;
+                border-radius: 99px;
+                font-weight: normal;
+                text-transform: none;
+                @include fz-16;
+                cursor: pointer;
+                position: absolute;
+                top: 0%;
+                right: 0;
+                padding: 0;
+
+                @include max-media($bk-576) {
+                    top: 100%;
+                    right: 50%;
+                    transform: translateX(50%);
+                    margin-top: 20px;
+                    height: 44px;
+                }
+
+                &::before {
+                    content: '';
+                    display: block;
+                    background-color: $blue-cl;
+                    position: absolute;
+                    width: 0;
+                    height: 100%;
+                    top: 0;
+                    right: 0;
+                    transition: all .3s ease;
+                    z-index: -1;
+                }
+
+                &:hover {
+                    &::before {
+                        left: 0;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .banners-inner {
+        width: 100%;
+        background-color: transparent;
+        padding: 230px 0;
+
+        @include max-media($bk-d-1900) {
+            padding: 200px 0;
+        }
+
+        @include max-media($bk-d-1200) {
+            padding: 160px 0;
+        }
+
+        @include max-media($bk-d-992) {
+            padding: 130px 0;
+        }
+
+        @include max-media($bk-d-768) {
+            padding: 100px 0;
+        }
+    }
+
+    .banners-img {
+        position: relative;
+        height: 100%;
+    }
+
+    &.banners-page {
+
+        background-image: url('../img/bg-banner-page.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        &::before{
+            content: '';
+            background-color: rgba($color: $b-cl, $alpha: .6);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .banners-wrap {
+            z-index: 1;
+            position: relative;
+        }
+
+        .banners-title{
+            @include lh(52,40);
+            margin-bottom: 0;
+        }
+
+        .breadcrumb {
+            margin: 0 auto;
+        }
+    }
 }

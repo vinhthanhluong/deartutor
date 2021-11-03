@@ -41,11 +41,25 @@ html {
 	@include custom-scrollbar(2px);
 }
 .mfp-content {
-	max-width: 600px;
+	// max-width: 600px;
 	.mfp-close {
 		color: $main-cl;
-		transition: 0.3s;
-		right: 0;
+		color: $w-cl;
+		background-color: $main-cl;
+		border-radius: 100%;
+		// transition: 0.3s;
+		top: 15px;
+		right: 15px;
+		height: 20px;
+		width: 20px;
+		line-height: 20px;
+		font-size: 15px;
+		opacity: 1;
+		font-weight: bold;
+		@include max-media($bk-576){
+			top: 10px;
+			right: 10px;
+		}
 	}
 	.popup-wrap {
 		@include flex-mid;
@@ -69,3 +83,30 @@ html {
 .swal2-shown {
 	padding-right: 0 !important;
 }
+
+.white-popup-block{
+	padding: 30px;
+	border-radius: 4px;
+	@include max-media($bk-576){
+		padding: 20px;
+	}
+	
+
+	&.block-signup{
+		max-width: 400px;
+	}
+
+	&.block-login{
+		padding: 30px 23px 30px;
+		max-width: 770px;
+		width: 770px;
+		@include max-media($bk-768){
+			width: auto;
+			padding: 20px;
+		}
+	}
+}
+
+
+
+

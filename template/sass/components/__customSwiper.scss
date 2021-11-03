@@ -1,17 +1,17 @@
 .swiper {
     .swiper-pagination {
-        bottom: 0;
+        bottom: 0px;
     }
 
     .swiper-pagination-bullet {
-        width: 6px;
-        height: 6px;
-        margin: 0 6px;
+        width: 8px;
+        height: 8px;
+        margin: 0 10px;
+        border-radius: 99px;
     }
 
     .swiper-pagination-bullet-active {
         background-color: $main-cl;
-        width: 8px;
-        height: 8px;
+        width: 50px;
     }
 }

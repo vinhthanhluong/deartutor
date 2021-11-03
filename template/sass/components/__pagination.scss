@@ -1,19 +1,20 @@
 .pagination {
-	margin-top: 30px;
+	margin-top: 40px;
 	text-align: center;
 	li {
 		display: inline-block;
 		vertical-align: middle;
 		.page-numbers {
-			width: 40px;
-			height: 40px;
+			width: 46px;
+			height: 46px;
 			border-radius: 100%;
-			border: 1px solid $border-cl;
+			border: 1px solid transparent;
 			//color: $t-b-cl;
 			font-weight: bold;
 			transition: all .3 ease;
 			@include lh(24, 14);
 			@include flex-mid;
+			color: rgba($color: $b-cl, $alpha: .5);
 			&.current {
 				background-color: $main-cl;
 				color: $t-w-cl;

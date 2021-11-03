@@ -18,6 +18,7 @@
 
         &.active {
             display: block;
+            animation: fadeInUp 1s;
         }
     }
     &-lines {
@@ -44,7 +45,7 @@
             padding: 10px;
             text-transform: uppercase;
     
-            @include max-media($bk-576) {
+            @include max-media($bk-d-768) {
                 display: block;
             }
             
@@ -61,7 +62,7 @@
         }
 
         .tab-link {
-            @include max-media($bk-576) {
+            @include max-media($bk-d-768) {
                 border: none;
                 display: block;
                 background-color: $bg-w-cl;
@@ -77,27 +78,134 @@
                 padding: 20px;
             }
 
-            @include max-media($bk-576) {
+            @include max-media($bk-d-768) {
                 padding: 8px 10px;
             }
 
             &:first-child {
                 padding-left: 0;
 
-                @include max-media($bk-576) {
+                @include max-media($bk-d-768) {
                     padding-left: 10px;
                 }
             }
 
             &.active {
-                @include max-media($bk-576) {
-                    background-color: wheat;
+                @include max-media($bk-d-768) {
+                    background-color: rgba($color: $blue-cl, $alpha: .2);
                 }
             }
         }
 
         .tab-line{
-            @include max-media($bk-576) {
+            @include max-media($bk-d-768) {
+                display: none;
+            }
+        }
+    }
+}
+
+.tabnew {
+    .tab-link {
+        display: flex;
+        position: relative;
+    }
+
+    .tab-title-new {
+        padding: 10px 20px;
+        cursor: pointer;
+        position: relative;
+        &.active {
+            color: red;
+        }
+    }
+
+    .tab-content-new {
+        display: none;
+
+        &.active {
+            display: block;
+            animation: fadeInUp 1s;
+        }
+    }
+    &-lines {
+        .tab-link{
+            border-bottom: 1px blue solid;
+        }
+        .tab-line {
+            transition: all .3s ease;
+            height: 1px;
+            background-color: $main-cl;
+            position: absolute;
+            bottom: -1px;
+        }
+
+    }
+
+    &-mobi{
+        .tab-link-mobi {
+            display: none;
+            width: 100%;
+            background-color: $main-cl;
+            color: $t-w-cl;
+            position: relative;
+            padding: 10px;
+            text-transform: uppercase;
+    
+            @include max-media($bk-d-768) {
+                display: block;
+            }
+            
+            &::before{
+                content: '\f107 ';
+                font-family: 'Fontawesome';
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                transform: translateY(-50%);
+                font-size: 20px;
+            }
+    
+        }
+
+        .tab-link {
+            @include max-media($bk-d-768) {
+                border: none;
+                display: block;
+                background-color: rgba($color: $main-cl, $alpha: .1);
+                padding: 10px;
+            }
+        }
+
+        .tab-title-new {
+            padding: 30px;
+
+
+            @include max-media($bk-d-992) {
+                padding: 20px;
+            }
+
+            @include max-media($bk-d-768) {
+                padding: 8px 10px;
+            }
+
+            &:first-child {
+                padding-left: 0;
+
+                @include max-media($bk-d-768) {
+                    padding-left: 10px;
+                }
+            }
+
+            &.active {
+                @include max-media($bk-d-768) {
+                    background-color: rgba($color: $blue-cl, $alpha: .2);
+                }
+            }
+        }
+
+        .tab-line{
+            @include max-media($bk-d-768) {
                 display: none;
             }
         }

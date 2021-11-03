@@ -7,8 +7,8 @@
 
     .breadcrumb-menu {
         display: flex;
-        border-bottom: 1px solid $main-cl;
         padding: 10px 0;
+        justify-content: center;
 
         @include max-media($bk-576) {
             overflow-x: scroll;
@@ -21,21 +21,24 @@
                 &::before {
                     content: '\f111 ';
                     font-family: "Fontawesome";
-                    font-size: 8px;
-                    color:  red;
-                    padding-right: 8px;
+                    font-size: 4px;
+                    color:  $w-cl;
+                    padding-right: 13px;
                 }
 
-                padding-left: 12px;
+                padding-left: 13px;
             }
+            color: $blue-cl;
+            display: flex;
+            align-items: center;
 
             &.current{
-                color: $main-cl;
+                color: $w-cl;
             }
+            
 
             a {
-                font-size: 15px;
-                font-weight: bold;
+                font-size: 14px;
                 transition: all .3s ease;
 
                 @include max-media($bk-d-768) {
@@ -43,7 +46,7 @@
                 }
 
                 &:hover {
-                    color: $main-cl;
+                    color: $blue-cl;
                 }
             }
         }

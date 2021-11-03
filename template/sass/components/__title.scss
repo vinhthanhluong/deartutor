@@ -17,6 +17,9 @@
 .--w-cl {
 	color: $t-w-cl;
 }
+.tt-70 {
+	@include fz-70;
+}
 .tt-65 {
 	@include fz-65;
 }

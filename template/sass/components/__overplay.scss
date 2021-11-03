@@ -8,7 +8,7 @@
 	z-index: 98;
 	display: none;
 	transition:all 0.2s ease;
-	@include max-media($bk-d-1200) {
+	@include max-media($bk-1300) {
 		display: block;
 	}
 }
