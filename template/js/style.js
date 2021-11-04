@@ -19,6 +19,8 @@ import CountDownModule from './modules/CountDownModule.js';
 import ScrollClassModule from './modules/ScrollClassModule.js';
 import SlideProductModule from './modules/SlideProductModule.js';
 import SelectModule from './modules/SelectModule.js';
+import ImgPRLModule from './modules/ImgPRLModule.js';
+import ActiveButtonModule from './modules/ActiveButtonModule.js';
 
 jQuery(document).ready(function ($) {
     ScrollTopModule();
@@ -42,4 +44,6 @@ jQuery(document).ready(function ($) {
     ScrollClassModule();
     SlideProductModule();
     SelectModule();
+    ImgPRLModule();
+    ActiveButtonModule();
 });

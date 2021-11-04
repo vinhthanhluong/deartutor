@@ -3,7 +3,7 @@ export default function SelectModule() {
 Reference: http://jsfiddle.net/BB3JK/47/
 */
 
-    if ($('.course-filter').length) {
+    if ($('.form-filter').length) {
         $('.filter-select').each(function () {
             var $this = $(this), numberOfOptions = $(this).children('option').length;
 
