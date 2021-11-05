@@ -16,9 +16,9 @@ export default function DropdownMenuModu() {
         dropdown.querySelector('a').appendChild(arrows);
         arrows.onclick = function (a) {
             a.preventDefault();
-            $(this).parent().next('.sub-menu').slideToggle();
-            $(this).toggleClass('--show');
-            $(this).closest('.dropdown').siblings().find('.sub-menu').slideUp();
+            $(this).parent().next('.sub-menu').stop().slideToggle();
+            $(this).stop().toggleClass('--show');
+            $(this).closest('.dropdown').siblings().find('.sub-menu').stop().slideUp();
         }
     });
 

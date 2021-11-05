@@ -10,6 +10,10 @@
     display: none !important;
 }
 
+.bg-f8{
+    background-color: $g-F8F8-cl !important;
+}
+
 .form-act {
     .act-title {
         margin-bottom: 5px;
@@ -284,6 +288,10 @@
                 font-weight: bold;
                 text-transform: none;
                 font-size: 14px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
                 &:not(:first-child) {
                     top: 16px;
@@ -293,11 +301,11 @@
                 }
 
                 &:nth-child(2) {
-                    top: 76px;
+                    top: 48px;
                 }
 
                 &:nth-child(3) {
-                    top: 136px;
+                    top: 96px;
                 }
             }
         }
@@ -357,6 +365,58 @@
 
                     img {
                         opacity: 0;
+                    }
+                }
+            }
+        }
+
+        &.t-load{
+            ul{
+                width: calc(100% - 57px);
+            }
+            .btn-anima {
+                width: 57px;
+                background-color: transparent;
+    
+                &:before,
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                }
+                &:before {
+                    border-radius: 1px;
+                    width: 2px;
+                    top: 50%;
+                    left: 50%;
+                    height: 20px;
+                    margin: -9px 0 0 -1px;
+                    background: $w-cl;
+                }
+                &:after {
+                    width: 60px;
+                    height: 60px;
+                    transform-origin: 50% 0;
+                    border-radius: 0 0 80% 80%;
+                    background: #{mix(white, #196BBD, 0%)};
+                    top: 0;
+                    left: 0;
+                    transform: scaleY(0);
+                }
+            }
+
+            &.loading {
+    
+                ul {
+                    animation: text calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+                }
+    
+                .btn-anima {
+                    &:before {
+                        animation: line calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+                    }
+                    &:after {
+                        animation: background calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
                     }
                 }
             }
@@ -1026,7 +1086,7 @@
                 &:nth-child(4){
                     transition: all .4s ease-in;
                 }
-                &:nth-child(4){
+                &:nth-child(5){
                     transition: all .5s ease-in;
                 }
             }

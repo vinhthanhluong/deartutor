@@ -75,9 +75,9 @@ export default function ActiveButtonModule() {
 
     function getPath(update, smoothing, pointsNew) {
         let points = pointsNew ? pointsNew : [
-            [0, 0],
-            [0, update],
-            [0, 0]
+            [4, 12],
+            [12, update],
+            [20, 12]
         ],
             d = points.reduce((acc, point, i, a) => i === 0 ? `M ${point[0]},${point[1]}` : `${acc} ${getPoint(point, i, a, smoothing)}`, '');
         return `<path d="${d}" />`;

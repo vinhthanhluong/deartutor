@@ -1,0 +1,366 @@
+.team-teacher {
+    padding: 50px 0 100px;
+    position: relative;
+    @include  max-media($bk-d-1200){
+        padding: 50px 0 60px;
+    }
+    @include max-media($bk-d-1024){
+        padding: 40px 0;
+    }
+    .teacher-head {
+        .column {
+            width: calc(100% / 4);
+            @include max-media($bk-d-768){
+                width: calc(100% / 2);
+            }
+
+        }
+
+        .teacher-title {
+            margin-bottom: 40px;
+            @include lh(48, 40);
+            text-align: center
+        }
+    }
+
+    .teacher-group {
+        .label {
+            @include lh(16.8, 14);
+        }
+
+        .f-select {
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .filter-select {
+            display: none;
+        }
+
+        .select-styled {
+            border: 1px solid rgba($color: $b-cl, $alpha: .1);
+            border-radius: 99px;
+            padding: 10px 25px 9px;
+            background-image: url('../img/svg/icon-down.svg');
+            background-repeat: no-repeat;
+            background-position: right 25px center;
+            cursor: pointer;
+            transition: all .3s ease;
+            @include max-media($bk-d-1024){
+                padding: 10px 15px;
+                background-position: right 15px center;
+            }
+
+            &:hover,
+            &:focus {
+                border-color: $main-cl;
+            }
+        }
+
+        .select-options {
+            background-color: $w-cl;
+            box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .16);
+            padding: 25px;
+            width: 100%;
+            position: absolute;
+            top: calc(100% + 15px);
+            left: 0;
+            z-index: 2;
+            display: none;
+            @include max-media($bk-d-768){
+                padding: 15px;
+            }
+
+
+            li {
+                cursor: pointer;
+                transition: all .3s ease;
+
+                &:not(:first-child) {
+                    padding-top: 25px;
+                    @include max-media($bk-d-768){
+                        padding-top: 15px;
+                    }
+                }
+
+                &:hover {
+                    color: $main-cl;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .teacher-content {
+        margin-top: 30px;
+
+        .column {
+            width: calc(100% / 4);
+            @include max-media($bk-d-1024){
+                width: calc(100% / 3);
+            }
+            @include max-media($bk-d-768){
+                width: calc(100% / 2);
+            }
+            @include max-media(450px){
+                width: 100%;
+            }
+
+            &:nth-child(1) {
+                .teacher-box {
+                    .teacher-social {
+                        .social-item {
+                            color: $red-cl ;
+
+                            &:hover {
+                                background-color: $red-cl;
+                                color: $w-cl;
+                            }
+                        }
+                    }
+                    .teacher-con{
+                        border-color: $red-cl;
+                        &::before{
+                            background-color: $red-cl;
+                        }
+                    }
+                }
+            }
+            &:nth-child(2) {
+                .teacher-box {
+                    .teacher-social {
+                        .social-item {
+                            color: $oran-cl ;
+
+                            &:hover {
+                                background-color: $oran-cl;
+                                color: $w-cl;
+                            }
+                        }
+                    }
+                    .teacher-con{
+                        border-color: $oran-cl;
+                        &::before{
+                            background-color: $oran-cl;
+                        }
+                    }
+                }
+            }
+            &:nth-child(3) {
+                .teacher-box {
+                    .teacher-social {
+                        .social-item {
+                            color: $main-cl ;
+
+                            &:hover {
+                                background-color: $main-cl;
+                                color: $w-cl;
+                            }
+                        }
+                    }
+                    .teacher-con{
+                        border-color: $main-cl;
+                        &::before{
+                            background-color: $main-cl;
+                        }
+                    }
+                }
+            }
+            &:nth-child(6) {
+                .teacher-box {
+                    .teacher-social {
+                        .social-item {
+                            color: $main-cl ;
+
+                            &:hover {
+                                background-color: $main-cl;
+                                color: $w-cl;
+                            }
+                        }
+                    }
+                    .teacher-con{
+                        border-color: $main-cl;
+                        &::before{
+                            background-color: $main-cl;
+                        }
+                    }
+                }
+            }
+            &:nth-child(7) {
+                .teacher-box {
+                    .teacher-social {
+                        .social-item {
+                            color: $red-cl ;
+
+                            &:hover {
+                                background-color: $red-cl;
+                                color: $w-cl;
+                            }
+                        }
+                    }
+                    .teacher-con{
+                        border-color: $red-cl;
+                        &::before{
+                            background-color: $red-cl;
+                        }
+                    }
+                }
+            }
+            &:nth-child(8) {
+                .teacher-box {
+                    .teacher-social {
+                        .social-item {
+                            color: $oran-cl ;
+
+                            &:hover {
+                                background-color: $oran-cl;
+                                color: $w-cl;
+                            }
+                        }
+                    }
+                    .teacher-con{
+                        border-color: $oran-cl;
+                        &::before{
+                            background-color: $oran-cl;
+                        }
+                    }
+                }
+            }
+            &:nth-child(9) {
+                .teacher-box {
+                    .teacher-social {
+                        .social-item {
+                            color: $red-cl ;
+
+                            &:hover {
+                                background-color: $red-cl;
+                                color: $w-cl;
+                            }
+                        }
+                    }
+                    .teacher-con{
+                        border-color: $red-cl;
+                        &::before{
+                            background-color: $red-cl;
+                        }
+                    }
+                }
+            }
+            &:nth-child(10) {
+                .teacher-box {
+                    .teacher-social {
+                        .social-item {
+                            color: $oran-cl ;
+
+                            &:hover {
+                                background-color: $oran-cl;
+                                color: $w-cl;
+                            }
+                        }
+                    }
+                    .teacher-con{
+                        border-color: $oran-cl;
+                        &::before{
+                            background-color: $oran-cl;
+                        }
+                    }
+                }
+            }
+            &:nth-child(11) {
+                .teacher-box {
+                    .teacher-social {
+                        .social-item {
+                            color: $main-cl ;
+
+                            &:hover {
+                                background-color: $main-cl;
+                                color: $w-cl;
+                            }
+                        }
+                    }
+                    .teacher-con{
+                        border-color: $main-cl;
+                        &::before{
+                            background-color: $main-cl;
+                        }
+                    }
+                }
+            }
+            &:nth-child(14) {
+                .teacher-box {
+                    .teacher-social {
+                        .social-item {
+                            color: $main-cl ;
+
+                            &:hover {
+                                background-color: $main-cl;
+                                color: $w-cl;
+                            }
+                        }
+                    }
+                    .teacher-con{
+                        border-color: $main-cl;
+                        &::before{
+                            background-color: $main-cl;
+                        }
+                    }
+                }
+            }
+            &:nth-child(15) {
+                .teacher-box {
+                    .teacher-social {
+                        .social-item {
+                            color: $red-cl ;
+
+                            &:hover {
+                                background-color: $red-cl;
+                                color: $w-cl;
+                            }
+                        }
+                    }
+                    .teacher-con{
+                        border-color: $red-cl;
+                        &::before{
+                            background-color: $red-cl;
+                        }
+                    }
+                }
+            }
+            &:nth-child(16) {
+                .teacher-box {
+                    .teacher-social {
+                        .social-item {
+                            color: $oran-cl ;
+
+                            &:hover {
+                                background-color: $oran-cl;
+                                color: $w-cl;
+                            }
+                        }
+                    }
+                    .teacher-con{
+                        border-color: $oran-cl;
+                        &::before{
+                            background-color: $oran-cl;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .teacher-box{
+        .teacher-con{
+            @include max-media($bk-d-1200){
+                padding: 15px ;
+            }
+        }
+    }
+
+    .pagination{
+        @include max-media($bk-d-1200){
+            margin-top: 30px;
+        }
+    }
+
+}
