@@ -53,5 +53,13 @@ export default function FileActiveModule() {
             $(this).next('.question-content').stop().slideToggle();
        });
     }
+
+    if ($('.lib-like').length) {
+        $('.lib-like').on('click', function () {
+            $(this).toggleClass('active');
+            
+        });
+        
+    }
    
 }

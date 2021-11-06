@@ -226,13 +226,13 @@
     }
 
     &.banners-page {
-
         background-image: url('../img/bg-banner-page.png');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
-        &::before{
+
+        &::before {
             content: '';
             background-color: rgba($color: $b-cl, $alpha: .6);
             position: absolute;
@@ -242,14 +242,20 @@
             height: 100%;
         }
 
+        .banners-title {
+            @include max-media($bk-576) {
+                text-align: left;
+            }
+        }
+
 
         .banners-wrap {
             z-index: 1;
             position: relative;
         }
 
-        .banners-title{
-            @include lh(52,40);
+        .banners-title {
+            @include lh(52, 40);
             margin-bottom: 0;
         }
 
