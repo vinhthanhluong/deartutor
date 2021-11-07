@@ -821,7 +821,12 @@
             display: flex;
             align-items: center;
             margin-bottom: 15px;
-
+            &.mb-30{
+                margin-bottom: 30px;
+                @include max-media($bk-d-1200){
+                    margin-bottom: 20px;
+                }
+            }
 
             .avatar-img {
                 img {
@@ -1066,6 +1071,7 @@
         
         .teacher-con{
             color: $w-cl;
+            background-color: transparent;
             &::before{
                 content: '';
                 transform: translateY(0);
@@ -1141,6 +1147,8 @@
         border-radius: 0 0 4px 4px;
         position: relative;
         transform-origin: bottom;
+        background-color: $w-cl;
+        transition: all .3s ease;
         &::before{
             content: '';
             width: 100%;
