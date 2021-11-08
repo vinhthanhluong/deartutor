@@ -21,6 +21,8 @@ import SlideProductModule from './modules/SlideProductModule.js';
 import SelectModule from './modules/SelectModule.js';
 import ImgPRLModule from './modules/ImgPRLModule.js';
 import ActiveButtonModule from './modules/ActiveButtonModule.js';
+import WowModule from './modules/WowModule.js';
+import VideoModule from './modules/VideoModule.js';
 
 jQuery(document).ready(function ($) {
     ScrollTopModule();
@@ -46,4 +48,6 @@ jQuery(document).ready(function ($) {
     SelectModule();
     ImgPRLModule();
     ActiveButtonModule();
+    WowModule();
+    VideoModule();
 });

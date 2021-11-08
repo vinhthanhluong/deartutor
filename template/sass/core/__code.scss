@@ -975,9 +975,19 @@
     .column {
         width: 50%;
         padding: 0;
+        @include max-media($bk-d-768){
+            width: 100%;
+        }
+
+        &:not(.f-course-main){
+            display: none;
+        }
 
         &.f-course-main {
             padding: 30px 70px 30px 30px;
+            @include max-media($bk-d-1024){
+                padding: 30px;
+            }
         }
     }
 
@@ -994,6 +1004,9 @@
 
         &:not(:first-child) {
             padding-top: 35px;
+            @include max-media($bk-d-1024){
+                padding-top: 25px;
+            }
         }
 
         .act-f {
@@ -1047,6 +1060,9 @@
 
     .btn-box {
         padding-top: 45px;
+        @include max-media($bk-d-1024){
+            padding-top: 35px;
+        }
     }
 
     .bg-f-course {
@@ -1172,6 +1188,17 @@
     }
 
     .teacher-job {}
+}
+
+.wow {
+    animation-duration: 1s;
+
+    @include max-media($bk-d-768) {
+        visibility: visible !important;
+        -webkit-animation-name: none !important;
+        -o-animation-name: none !important;
+        animation-name: none !important;
+    }
 }
 
 

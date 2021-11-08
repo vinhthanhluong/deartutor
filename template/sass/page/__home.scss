@@ -562,6 +562,14 @@
             padding: 40px 0;
         }
 
+        .tab{
+            .tab-link{
+                @include max-media($bk-d-768){
+                    background-color: rgba($color: $main-cl, $alpha: .1);
+                }
+            }
+        }
+
         .tab-content-box {
             .column {
                 width: calc(100% /3);

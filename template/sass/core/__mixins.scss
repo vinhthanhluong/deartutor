@@ -29,6 +29,23 @@
     }
 }
 
+@mixin custom-horizontal-scrollbar($height: $w-scroll,
+    $thumb: $main-cl,
+    $track: $w-cl) {
+    &::-webkit-scrollbar {
+        height: $height;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $thumb;
+        border-radius: 990px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $track;
+    }
+}
+
 @mixin custom-vertical-scrollbar($width: $w-scroll,
     $thumb: $main-cl,
     $track: $w-cl) {

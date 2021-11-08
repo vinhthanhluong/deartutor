@@ -17,11 +17,28 @@
     .column {
         &.post-main {
             width: calc(100% / 12 * 8 - 30px);
-            padding-right: 55px;
+            @include max-media($bk-992){
+                width: 100%;
+            }
+            
+         
         }
 
         &.sibar {
             width: calc(100% / 12 * 4 + 30px);
+            @include max-media($bk-992){
+                width: 100%;
+            }
+        }
+    }
+
+    .post-inner{
+        padding-right: 40px;
+        @include max-media($bk-d-1200){
+            padding-right: 25px;
+        }
+        @include max-media($bk-d-1024){
+            padding-right: 10px;
         }
     }
 
@@ -31,6 +48,9 @@
         background-color: $w-cl;
         box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .16);
         border-radius: 4px;
+        @include max-media($bk-992){
+            margin-top: 20px;
+        }
 
         .info-img {
 
@@ -45,12 +65,18 @@
 
         .info-content {
             padding: 30px;
+            @include max-media($bk-d-768){
+                padding: 20px;
+            }
         }
 
         .info-price {
             display: flex;
             align-items: center;
             margin-bottom: 30px;
+            @include max-media($bk-d-768){
+                margin-bottom: 20px;
+            }
 
             .price-icon {
                 width: 36px;
@@ -74,6 +100,9 @@
 
             &:not(:first-child) {
                 padding-top: 25px;
+                @include max-media($bk-d-768){
+                    padding-top: 18px;
+                }
             }
 
             .info-tt {
@@ -94,6 +123,9 @@
 
         .info-btn {
             margin-top: 40px;
+            @include max-media($bk-d-768){
+                margin-top: 30px;
+            }
 
             .btn-link {
                 display: flex;
@@ -128,10 +160,19 @@
             align-items: center;
             justify-content: space-between;
             margin-bottom: 50px;
+            @include max-media($bk-992){
+                margin-bottom: 30px;
+            }
+            @include max-media(450px){
+                align-items: flex-start;
+            }
 
             .post-man {
                 display: flex;
                 align-items: center;
+                @include max-media(450px){
+                    align-items: flex-start;
+                }
             }
 
             .man-avatar {
@@ -144,12 +185,26 @@
                 display: flex;
                 align-items: center;
                 padding-left: 13px;
+                @include max-media(450px){
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
 
                 .man-text {
                     &:first-child {
                         border-right: 1px solid rgba($color: $b-cl, $alpha: .1);
                         padding-right: 30px;
                         margin-right: 30px;
+                        @include max-media($bk-576){
+                            padding-right: 15px;
+                            margin-right: 15px;
+                        }
+                        @include max-media(450px){
+                            padding-right: 0;
+                            margin-right: 0;
+                            border: 0;
+                            padding-bottom: 10px;
+                        }
                     }
 
                     p.main-cl {
@@ -169,13 +224,39 @@
             margin-bottom: 30px;
         }
 
+        .tab-link{
+            @include max-media($bk-d-1200){
+                justify-content: space-between;
+            }
+            @include max-media($bk-d-768){
+                background-color: rgba($color: $main-cl, $alpha: .1);
+            }
+        }
+
         .tab-title {
             padding: 10px 45px 0;
             font-weight: bold;
             color: rgba($color: $b-cl, $alpha: .5);
+            @include max-media($bk-d-1200){
+                padding: 10px 20px 0;
+            }
+            @include max-media($bk-d-768){
+                // padding-left: 0;
+                padding: 7px 18px;
+            }
+
+            &.active{
+                @include max-media($bk-d-768){
+                    border-bottom: 2px solid $main-cl;
+                }
+            }
 
             &:first-child {
                 padding-left: 0;
+                @include max-media($bk-d-768){
+                    padding-left: 18px;
+                }
+                
             }
 
             &:last-child {
@@ -185,6 +266,10 @@
             p {
                 border-bottom: 2px solid transparent;
                 padding-bottom: 7px;
+                @include max-media($bk-d-768){
+                    padding-bottom: 0;
+                    border: none;
+                }
 
             }
 
@@ -193,6 +278,7 @@
 
                 p {
                     border-color: $main-cl;
+                
                 }
             }
         }
@@ -210,9 +296,17 @@
             padding: 30px;
             border-radius: 4px;
             background-color: rgba($color: $main-cl, $alpha: .05);
+            @include max-media($bk-992){
+                padding: 20px;
+                margin-top: 20px;
+            }
 
             .tpost-title {
                 margin-bottom: 30px;
+                @include max-media($bk-d-768){
+                    margin-bottom: 15px;
+
+                }
             }
 
             .tpost-item {
@@ -220,6 +314,9 @@
 
                 &:not(:first-child) {
                     margin-top: 30px;
+                    @include max-media($bk-992){
+                        margin-top: 20px;
+                    }
                 }
 
                 img {
@@ -241,6 +338,14 @@
                     padding-bottom: 35px;
                     margin-bottom: 35px;
                     border-bottom: 1px solid rgba($color: $b-cl, $alpha: .1);
+                    @include max-media($bk-d-1200){
+                        padding-bottom: 30px;
+                        margin-bottom: 30px;
+                    }
+                    @include max-media($bk-d-768){
+                        padding-bottom: 20px;
+                        margin-bottom: 20px;
+                    }
                 }
 
                 &.active {
@@ -260,6 +365,7 @@
             .tpost-title {
                 position: relative;
                 cursor: pointer;
+                padding-right: 10px;
 
                 &::after {
                     content: '\f107 ';
@@ -270,6 +376,7 @@
                     top: 0;
                     right: 0;
                     transition: all .3s ease;
+                    // padding-right: 10px;
 
                 }
             }
@@ -309,6 +416,7 @@
                     transition: all .3s ease;
                     color: rgba($color: $b-cl, $alpha: .5);
                     @include lh(24, 16);
+                    padding-right: 10px;
 
                     img {
                         padding-right: 13px;
@@ -323,6 +431,10 @@
                     border-radius: 99px;
                     transition: all .3s ease;
                     line-height: 1.6;
+                    white-space: nowrap;
+                    @include max-media($bk-576){
+                        padding: 5px 10px 4px;
+                    }
                 }
             }
         }
@@ -333,11 +445,24 @@
             .column {
                 &.tpost-box {
                     width: 38.963%;
-
+                    @include max-media($bk-576){
+                        width: 100%;
+                    }
                 }
 
                 &.tpost-tx {
                     width: calc(100% - 38.963%);
+                    @include max-media($bk-576){
+                        width: 100%;
+                    }
+                }
+            }
+
+            .teacher-box{
+                .teacher-con{
+                    @include max-media($bk-d-1200){
+                        padding: 15px 15px;
+                    }
                 }
             }
 
@@ -357,11 +482,23 @@
             .visit-comment {
                 .column {
                     &.comment-if {
-                        width: 27.399%;
+                        width: 200px;
+                        @include max-media($bk-d-1024){
+                            width: 170px;
+                        }
+                        @include max-media(450px){
+                            width: 140px;
+                        }
                     }
 
                     &.comment-tx {
-                        width: calc(100% - 27.399%);
+                        width: calc(100% - 200px);
+                        @include max-media($bk-d-1024){
+                            width: calc(100% - 170px);
+                        }
+                        @include max-media(450px){
+                            width:calc(100% - 140px);
+                        }
                     }
                 }
             }
@@ -375,6 +512,16 @@
                 box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .16);
                 border-radius: 4px;
                 text-align: center;
+                @include max-media($bk-d-1024){
+                    padding: 20px ;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                @include max-media(450px){
+                    padding: 0;
+                }
 
                 .comment-number {
                     margin-bottom: 15px;
@@ -389,6 +536,16 @@
 
             .comment-info {
                 padding-left: 40px;
+                @include max-media($bk-d-1200){
+                    padding-left: 20px;
+                }
+                @include max-media($bk-d-1024){
+                    padding-left: 10px;
+                }
+                @include max-media(450px){
+                    padding-left: 0;
+                }
+                
 
                 .comment-item {
                     @include fz-16;
@@ -451,13 +608,16 @@
                     }
 
                     .comment-line {
-                        max-width: 380px;
+                        // max-width: 380px;
                         width: 100%;
                         height: 10px;
                         background-color: rgba($color: $b-cl, $alpha: .1);
                         border-radius: 99px;
                         position: relative;
-
+                        margin: 0 18px;
+                        @include max-media(450px){
+                            margin: 0 10px;
+                        }
                         &::before {
                             content: '';
                             height: 100%;
@@ -480,6 +640,9 @@
 
         .content-comment {
             margin-top: 52px;
+            @include max-media($bk-d-768){
+                margin-top: 30px;
+            }
 
             .comment-head {
                 display: flex;
@@ -525,11 +688,18 @@
                             height: 50px;
                             border-radius: 100%;
                             object-fit: cover;
+                            @include max-media($bk-576){
+                                width: 45px;
+                                height: 45px;
+                            }
                         }
                     }
                     .comment-tx{
                         padding-left: 13px;
                         width: calc(100% - 50px);
+                        @include max-media($bk-576){
+                            width: calc(100% - 45px);
+                        }
                     }
 
                     .f-control{
@@ -540,6 +710,9 @@
                         width: 100%;
                         height: 110px;
                         resize: none;
+                        @include max-media($bk-d-768){
+                            padding: 20px;
+                        }
                         &::placeholder{
                             color: #C0C0C0;
                         }
@@ -549,6 +722,9 @@
                         background-color: $g-F8F8-cl;
                         padding: 25px;
                         border-radius: 4px;
+                        @include max-media($bk-d-768){
+                            padding: 20px 15px;
+                        }
                     }
 
                     .com-head{
@@ -556,10 +732,16 @@
                         align-items: center;
                         .com-name{
                             padding-right: 15px;
+                            @include max-media($bk-d-768){
+                                padding-right: 10px;
+                            }
                         }
                         .com-date{
                             font-size: 12px;
                             color: #707070;
+                            @include max-media($bk-576){
+                                font-size: 10px;
+                            }
                         }
                     }
                     .com-desc{

@@ -148,6 +148,21 @@
 
     }
 
+    &.teach-us{
+        .btn-box{
+            width: 277px;
+        }
+
+        .button-custom{
+            ul{
+                width: calc(100% - 57px);
+            }
+            .btn-anima{
+                width: 57px;
+            }
+        }
+    }
+
 
 }
 
