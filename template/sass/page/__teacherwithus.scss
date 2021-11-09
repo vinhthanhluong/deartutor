@@ -476,6 +476,18 @@
                 z-index: 1;
             }
 
+            .bg-shaw {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -28%);
+                box-shadow: 0px 10px 30px rgba($color: $b-cl, $alpha: .25);
+                width: 467px;
+                height: 233px;
+                display: block;
+                background-color: $w-cl;
+            }
+
         }
 
         .deartutor-img {
@@ -510,17 +522,7 @@
 
 
 
-            .bg-shaw {
-                position: absolute;
-                top: 0;
-                left: 50%;
-                transform: translate(-50%, -28%);
-                box-shadow: 0px 10px 30px rgba($color: $b-cl, $alpha: .25);
-                width: 467px;
-                height: 233px;
-                display: block;
-                background-color: $w-cl;
-            }
+            
 
             img {
                 position: absolute;

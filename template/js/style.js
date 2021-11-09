@@ -23,6 +23,7 @@ import ImgPRLModule from './modules/ImgPRLModule.js';
 import ActiveButtonModule from './modules/ActiveButtonModule.js';
 import WowModule from './modules/WowModule.js';
 import VideoModule from './modules/VideoModule.js';
+import ParallaxModule from './modules/ParallaxModule.js';
 
 jQuery(document).ready(function ($) {
     ScrollTopModule();
@@ -50,4 +51,5 @@ jQuery(document).ready(function ($) {
     ActiveButtonModule();
     WowModule();
     VideoModule();
+    ParallaxModule();
 });
